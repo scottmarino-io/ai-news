@@ -45,12 +45,16 @@ jobs:
           data = open("news/latest.json").read()[:150_000]
           today = datetime.date.today().isoformat()
 
-          system = """You review an automated AI-news briefing file right after it is published.
-          Reply with ONLY a JSON object, no other text: {"ok": true or false, "issues": ["..."]}
-          Set ok to false only for real problems: empty or placeholder content, error messages or
-          stack traces where news should be, obviously truncated items, duplicate stories, dates that
-          are clearly stale relative to today, or items missing their source link.
-          Minor wording or style issues are not problems."""
+          system = f"""You review an automated AI-news briefing file right after it is published.
+          Today is {today}. Your own knowledge is out of date: recent funding rounds, valuations,
+          and IPOs may be far larger than anything you know about. NEVER flag a figure as
+          implausible, exaggerated, or unverified based on your own knowledge.
+          Reply with ONLY a JSON object, no other text: {{"ok": true or false, "issues": ["..."]}}
+          Set ok to false only for: empty or placeholder content, error messages or stack traces
+          where news should be, truncated items, duplicate stories, a headline that contradicts
+          its own summary (e.g. calling a valuation the amount raised), stories dated more than
+          7 days before today, or items missing a source link.
+          Minor wording, style, or source-quality issues are not problems."""
 
           client = anthropic.Anthropic()  # authenticates via WIF from the env vars above
           msg = client.messages.create(
