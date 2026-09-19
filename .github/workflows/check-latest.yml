@@ -45,43 +45,70 @@ jobs:
           data = open("news/latest.json").read()[:150_000]
           today = datetime.date.today().isoformat()
 
-          system = f"""You review an automated AI-news briefing file right after it is published.
-          Today is {today}. Your own knowledge is out of date: recent funding rounds, valuations,
-          and IPOs may be far larger than anything you know about. NEVER flag a figure as
-          implausible, exaggerated, or unverified based on your own knowledge.
-          Reply with ONLY a JSON object, no other text: {{"ok": true or false, "issues": ["..."]}}
-          Set ok to false only for: empty or placeholder content, error messages or stack traces
-          where news should be, truncated items, duplicate stories, a headline that contradicts
-          its own summary (e.g. calling a valuation the amount raised), stories dated more than
-          7 days before today, or items missing a source link.
-          Minor wording, style, or source-quality issues are not problems."""
+          # Only these categories can fail the check. Anything else Claude reports
+          # is shown as a non-blocking notice.
+          ALLOWED = {
+              "EMPTY_OR_PLACEHOLDER": "Empty or placeholder content",
+              "ERROR_TEXT": "Error message or stack trace instead of news",
+              "TRUNCATED": "Item cut off mid-sentence or missing required fields",
+              "DUPLICATE": "Same story appears more than once",
+              "HEADLINE_MISMATCH": "Headline contradicts the item's own summary",
+              "STALE": "Story dated more than 7 days before today",
+              "MISSING_LINK": "Item has no source URL at all",
+          }
+          categories = "\n".join(f"- {k}: {v}" for k, v in ALLOWED.items())
+
+          system = f"""You check an automated AI-news briefing file for mechanical problems.
+          Today is {today}.
+
+          Report an issue ONLY if it fits one of these categories:
+          {categories}
+
+          Rules:
+          - Use only information inside the file. Your own knowledge is out of date, so never
+            judge whether a number, valuation, or event is plausible.
+          - Source quality (aggregators vs. original outlets) is NOT an issue.
+          - Do not report things that are fine. If nothing fits a category, return an empty list.
+
+          Reply with ONLY this JSON, no other text:
+          {{"issues": [{{"item": "item id or headline", "category": "ONE_OF_THE_CATEGORIES", "detail": "short explanation"}}]}}"""
 
           client = anthropic.Anthropic()  # authenticates via WIF from the env vars above
           msg = client.messages.create(
-              model="claude-haiku-4-5",
-              max_tokens=1000,
+              model="claude-sonnet-5",
+              max_tokens=2000,
               system=system,
-              messages=[{"role": "user", "content": f"Today is {today}.\n\n<file>\n{data}\n</file>"}],
+              messages=[{"role": "user", "content": f"<file>\n{data}\n</file>"}],
           )
           text = "".join(b.text for b in msg.content if b.type == "text").strip()
           text = text.removeprefix("```json").removeprefix("```").removesuffix("```").strip()
 
           try:
-              verdict = json.loads(text)
-          except json.JSONDecodeError:
+              issues = json.loads(text).get("issues", [])
+          except (json.JSONDecodeError, AttributeError):
               print("::warning::Could not parse Claude's reply:\n" + text)
               sys.exit(0)
 
-          issues = verdict.get("issues", [])
+          blocking = [i for i in issues if i.get("category") in ALLOWED]
+          other = [i for i in issues if i.get("category") not in ALLOWED]
+
+          def line(i):
+              return f"[{i.get('category')}] {i.get('item')}: {i.get('detail')}"
+
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
               f.write("## latest.json review\n\n")
-              f.write("✅ Looks good\n" if verdict.get("ok") else "❌ Problems found\n")
-              for i in issues:
-                  f.write(f"- {i}\n")
+              f.write("❌ Problems found\n\n" if blocking else "✅ Looks good\n\n")
+              for i in blocking:
+                  f.write(f"- {line(i)}\n")
+              if other:
+                  f.write("\n**Notes (not blocking):**\n\n")
+                  for i in other:
+                      f.write(f"- {line(i)}\n")
 
-          if not verdict.get("ok", False):
-              for i in issues:
-                  print(f"::error::{i}")
-              sys.exit(1)
-          print("latest.json looks good")
+          for i in other:
+              print(f"::notice::{line(i)}")
+          for i in blocking:
+              print(f"::error::{line(i)}")
+
+          sys.exit(1 if blocking else 0)
           PY
