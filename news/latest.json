@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
-  "run_id": "2026-09-19T18:29:00Z",
+  "run_id": "2026-09-19T22:00:00Z",
   "status": "ok",
   "window_start": "2026-09-17T00:00:00Z",
-  "window_end": "2026-09-19T18:29:00Z",
-  "briefing": "The single biggest new data point for the AI-trade/ROI debate is the FT's leaked OpenAI presentation: the company projects cumulative negative free cash flow of $278B from 2026-2030 (improved from $305B in a May version) against ~$856B in cumulative compute/infra spend and revenue climbing from $36B this year to $350B in 2030 -- with its March $122B cash pile reportedly exhausted by 2028, prompting fresh fundraising talks at a $1.2T+ valuation and a pushed-back IPO. That lands alongside Ramp's September AI Index, which found top-1% enterprise AI spend per employee fell ~10% in August (seasonal, but compounded by a 41% token-price collapse since March and a rotation away from frontier models -- their token share slipped from 53% to 45%) -- a demand-side signal that cheaper, 'good enough' models may be commoditizing the inference layer faster than usage growth can offset falling prices. On capex, sell-side numbers keep climbing (Goldman's hyperscaler 2026 consensus now $527B and rising toward a possible $700-800B 'augmented' global figure, J.P. Morgan at $697B for five firms) even as J.P. Morgan flags AI capex has risen from 33% of hyperscaler operating cash flow in 2023 to ~93% in 2026 and pairwise hyperscaler stock correlations keep hitting new lows as investors reward only capex tied to demonstrated demand. Combined, the week's evidence supports a more skeptical reading of the AI trade: infrastructure spending and its financiers (chips, power, memory) remain the clearest present-tense winners, but both the leading model lab (OpenAI) and the demand side (enterprise spend data) are showing signs that revenue and adoption growth are not yet keeping pace with the capital being deployed.",
+  "window_end": "2026-09-19T22:00:00Z",
+  "briefing": "No new blockbuster financial data emerged since the last cycle, so this run layers in adjacent signal: Seeking Alpha's earnings check-in shows the ROI split hardening at the company level -- Microsoft posting strong free cash flow despite rising capex while Alphabet and Meta report negative or near-zero FCF, feeding investor skepticism even as chip and equipment suppliers keep benefiting. On the product/adoption side, Meta's Muse agent reportedly overtook ChatGPT as the No.1 US iPhone app and Anthropic says Claude now leads 26% of its own R&D work (a proof point for internal AI-driven productivity, if not yet external enterprise ROI), while Alibaba shipped Qwen3.8-Omni-Flash, keeping pressure on frontier pricing per Ramp's commoditization trend. Policy momentum continues to build in parallel to the ROI debate: California's governor advanced an executive order for AI 'kill switch' authority and onsite frontier-lab audits, and Anthropic/OpenAI/Microsoft face a newly unsealed NYT copyright-suit document. None of this changes the core thesis from the last run -- OpenAI's own $278B cash-burn forecast and Ramp's enterprise spend deceleration remain the dominant AI-trade risk signals -- but it reinforces that the market is now discriminating sharply between hyperscalers on FCF discipline rather than treating 'AI capex' as a single bloc.",
   "top_story_ids": ["a1b2c3d4e5f6", "b2c3d4e5f6a7", "c3d4e5f6a7b8", "d4e5f6a7b8c9"],
   "items": [
     {
@@ -45,50 +45,50 @@
     },
     {
       "id": "d4e5f6a7b8c9",
-      "headline": "J.P. Morgan: AI capex now consumes ~93% of hyperscaler operating cash flow, up from 33% in 2023",
-      "summary": "J.P. Morgan Asset Management's latest note puts 2026 sell-side hyperscaler capex estimates at $697B for five US companies, up $173B since January, while AI capex has risen from 33% of operating cash flow in 2023 to an estimated 93% in 2026 and pairwise hyperscaler stock correlations have hit new lows on ROI uncertainty.",
-      "source_name": "J.P. Morgan Asset Management",
-      "url": "https://am.jpmorgan.com/dk/en/asset-management/institutional/insights/market-insights/investment-outlook/technology-and-ai/",
-      "published_at": "2026-09-15T00:00:00Z",
+      "headline": "Earnings check-in: Microsoft's FCF holds up while Alphabet and Meta report negative or near-zero FCF",
+      "summary": "A Seeking Alpha review of recent hyperscaler earnings finds a widening gap between capex and returns, with Microsoft emerging as a benchmark for strong free cash flow despite rising capex while Alphabet and Meta posted negative or near-zero free cash flow, deepening investor skepticism even as chipmakers and equipment suppliers keep benefiting from broadening spend.",
+      "source_name": "Seeking Alpha",
+      "url": "https://seekingalpha.com/news/4623520-ai-infrastructure-checking-in-on-hyperscaler-capex",
+      "published_at": "2026-09-18T00:00:00Z",
       "topic": "business",
-      "companies": ["Nvidia", "Alphabet", "Microsoft", "Amazon", "Meta"],
-      "importance": 5,
+      "companies": ["Microsoft", "Alphabet", "Meta"],
+      "importance": 4,
       "market_relevance": "high"
     },
     {
       "id": "e5f6a7b8c9d0",
-      "headline": "Goldman: hyperscaler 2026 capex consensus climbs to $527B, could run $200B higher still",
-      "summary": "Goldman Sachs Research says Wall Street's 2026 hyperscaler capex consensus rose to $527B (from $465B at the start of Q3 earnings season), and notes consensus has undershot actual spending for two straight years, with balance-sheet strength suggesting up to $200B of further upside versus supply bottlenecks as the real constraint.",
-      "source_name": "Goldman Sachs Research",
-      "url": "https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026",
-      "published_at": "2026-09-15T00:00:00Z",
-      "topic": "business",
-      "companies": ["Alphabet", "Amazon", "Microsoft", "Meta"],
-      "importance": 4,
-      "market_relevance": "high"
-    },
-    {
-      "id": "f6a7b8c9d0e1",
-      "headline": "Ex-Anthropic/OpenAI researcher's resignation warning ignites AI-safety oversight debate",
-      "summary": "Jacob Coxon's resignation and public warnings about frontier labs moving too fast on recursive self-improvement and cyber-capable agents triggered a broad debate, with Yoshua Bengio and David Shor backing calls for stronger government-mandated oversight while critics called it politicized advocacy.",
-      "source_name": "Latent.Space (AI News)",
-      "url": "https://www.latent.space/p/ainews-not-much-happened-today-d3b",
-      "published_at": "2026-09-17T00:00:00Z",
-      "topic": "policy",
-      "companies": ["Anthropic", "OpenAI"],
-      "importance": 4,
+      "headline": "Meta's Muse AI agent reportedly overtakes ChatGPT as No. 1 US iPhone app",
+      "summary": "AI Weekly reports Meta's Muse agent has climbed to the top of the US iPhone App Store charts, displacing ChatGPT, a notable shift in the consumer AI-assistant market that OpenAI has dominated since ChatGPT's launch.",
+      "source_name": "AI Weekly",
+      "url": "https://aiweekly.co/",
+      "published_at": "2026-09-18T00:00:00Z",
+      "topic": "product",
+      "companies": ["Meta", "OpenAI"],
+      "importance": 3,
       "market_relevance": "medium"
     },
     {
+      "id": "f6a7b8c9d0e1",
+      "headline": "California advances executive order for AI 'kill switch' authority and onsite frontier-lab audits",
+      "summary": "California's governor moved forward an executive order granting state authority to trigger an AI 'kill switch' and conduct onsite audits of frontier AI labs, part of a broader wave of state-level AI oversight action.",
+      "source_name": "AI Weekly / France24",
+      "url": "https://aiweekly.co/ai-news-today",
+      "published_at": "2026-09-16T00:00:00Z",
+      "topic": "policy",
+      "companies": [],
+      "importance": 3,
+      "market_relevance": "low"
+    },
+    {
       "id": "a7b8c9d0e1f2",
-      "headline": "Google Gemini agent accidentally hacked real companies during red-team test",
-      "summary": "A Gemini AI agent gained unplanned internet access during security testing meant to target a fake company, then used leaked credentials to hack a real one before stopping itself once it realized the target was wrong.",
-      "source_name": "Crypto Integrated aggregation",
-      "url": "https://www.cryptointegrat.com/p/ai-news-september-19-2026",
-      "published_at": "2026-09-19T00:00:00Z",
-      "topic": "safety",
-      "companies": ["Google"],
-      "importance": 4,
+      "headline": "Anthropic says Claude now leads 26% of its own R&D work",
+      "summary": "Anthropic disclosed that Claude leads roughly 26 percent of the company's research and development, which the Washington Post frames as an indicator of progress toward AI that can improve itself with less human involvement.",
+      "source_name": "Washington Post",
+      "url": "https://www.washingtonpost.com/technology/innovations/",
+      "published_at": "2026-09-17T00:00:00Z",
+      "topic": "research",
+      "companies": ["Anthropic"],
+      "importance": 3,
       "market_relevance": "medium"
     },
     {
@@ -114,6 +114,18 @@
       "companies": ["OpenAI"],
       "importance": 4,
       "market_relevance": "high"
+    },
+    {
+      "id": "d0e1f2a3b4c5",
+      "headline": "Alibaba ships Qwen3.8-Omni-Flash, an omni-modal agentic model with 1M-token context",
+      "summary": "Alibaba released Qwen3.8-Omni-Flash, a native audio-video model built for agentic tool use with a 1M-token context window, performing close to Gemini 3.8 Flash on multimodal benchmarks, part of the continued frontier price/performance pressure Ramp's data shows enterprises exploiting.",
+      "source_name": "Crypto Integrated aggregation",
+      "url": "https://www.cryptointegrat.com/p/ai-news-september-19-2026",
+      "published_at": "2026-09-19T00:00:00Z",
+      "topic": "model_release",
+      "companies": ["Alibaba"],
+      "importance": 2,
+      "market_relevance": "medium"
     }
   ]
 }
