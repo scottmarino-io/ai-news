@@ -23,20 +23,101 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Basic checks (exists, not empty, valid JSON)
+        id: basic
         run: |
           test -s news/latest.json || { echo "::error::news/latest.json is missing or empty"; exit 1; }
           jq empty news/latest.json || { echo "::error::news/latest.json is not valid JSON"; exit 1; }
 
+      - name: Structure & date checks (no AI, free)
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          from datetime import datetime, timedelta
+
+          # How many days before the agent's own window_start an item may be published
+          # and still pass. 0 = strict (must fall inside the window).
+          GRACE_DAYS = 0
+
+          def ts(s):
+              return datetime.fromisoformat(s.replace("Z", "+00:00"))
+
+          doc = json.load(open("news/latest.json"))
+          errors, notes = [], []
+
+          for k in ["status", "window_start", "window_end", "briefing", "items"]:
+              if k not in doc:
+                  errors.append(f"Missing top-level field '{k}'")
+
+          if not errors:
+              if doc["status"] != "ok":
+                  errors.append(f"status is '{doc['status']}', expected 'ok'")
+              if not str(doc["briefing"]).strip():
+                  errors.append("briefing text is empty")
+              if not doc["items"]:
+                  errors.append("items list is empty")
+
+              ws, we = ts(doc["window_start"]), ts(doc["window_end"])
+              earliest = ws - timedelta(days=GRACE_DAYS)
+              ids, urls = set(), {}
+
+              for n, it in enumerate(doc["items"], 1):
+                  label = it.get("id") or f"item #{n}"
+                  missing = [k for k in ["id", "headline", "summary", "source_name", "url", "published_at"]
+                             if not str(it.get(k, "")).strip()]
+                  if missing:
+                      errors.append(f"{label}: missing {', '.join(missing)}")
+                      continue
+                  if it["id"] in ids:
+                      errors.append(f"{label}: duplicate id")
+                  ids.add(it["id"])
+                  if not it["url"].startswith("https://"):
+                      errors.append(f"{label}: url is not https ({it['url']})")
+                  if it["url"] in urls:
+                      notes.append(f"{label}: same url as {urls[it['url']]}")
+                  urls.setdefault(it["url"], label)
+                  try:
+                      p = ts(it["published_at"])
+                  except ValueError:
+                      errors.append(f"{label}: unreadable published_at '{it['published_at']}'")
+                      continue
+                  if p < earliest:
+                      errors.append(f"{label}: published {p.date()}, before the briefing window "
+                                    f"({ws.date()} to {we.date()})")
+                  if p > we + timedelta(days=1):
+                      errors.append(f"{label}: published {p.date()}, after the briefing window ends")
+
+              for sid in doc.get("top_story_ids", []):
+                  if sid not in ids:
+                      errors.append(f"top_story_ids lists '{sid}', which isn't a valid item")
+
+          with open(os.environ.get("GITHUB_STEP_SUMMARY", "/dev/null"), "a") as f:
+              f.write("## Structure & date checks\n\n")
+              f.write("❌ Problems found\n\n" if errors else "✅ Passed\n\n")
+              for e in errors:
+                  f.write(f"- {e}\n")
+              for m in notes:
+                  f.write(f"- (note) {m}\n")
+
+          for m in notes:
+              print(f"::notice::{m}")
+          for e in errors:
+              print(f"::error::{e}")
+          sys.exit(1 if errors else 0)
+          PY
+
       - name: Fetch GitHub OIDC token
+        if: ${{ !cancelled() && steps.basic.outcome == 'success' }}
         run: |
           curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
             "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
             | jq -r .value > /tmp/gha-jwt
 
       - name: Install Anthropic SDK
+        if: ${{ !cancelled() && steps.basic.outcome == 'success' }}
         run: pip install -q -U anthropic
 
       - name: Claude review
+        if: ${{ !cancelled() && steps.basic.outcome == 'success' }}
         run: |
           python - <<'PY'
           import datetime, json, os, sys
@@ -53,8 +134,6 @@ jobs:
               "TRUNCATED": "Item cut off mid-sentence or missing required fields",
               "DUPLICATE": "Same story appears more than once",
               "HEADLINE_MISMATCH": "Headline contradicts the item's own summary",
-              "STALE": "Story dated more than 7 days before today",
-              "MISSING_LINK": "Item has no source URL at all",
           }
           categories = "\n".join(f"- {k}: {v}" for k, v in ALLOWED.items())
 
@@ -67,6 +146,7 @@ jobs:
           Rules:
           - Use only information inside the file. Your own knowledge is out of date, so never
             judge whether a number, valuation, or event is plausible.
+          - Dates, links, and IDs are checked separately by code. Do not report them.
           - Source quality (aggregators vs. original outlets) is NOT an issue.
           - Do not report things that are fine. If nothing fits a category, return an empty list.
 
