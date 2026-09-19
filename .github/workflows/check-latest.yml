@@ -1,0 +1,83 @@
+name: Check latest.json
+
+on:
+  push:
+    branches: [main]
+    paths: [news/latest.json]
+  workflow_dispatch:
+
+permissions:
+  id-token: write   # lets the job request a GitHub OIDC token for WIF
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_FEDERATION_RULE_ID: fdrl_01Gqy4Wrg6hPR1gdCPHqL7DA
+      ANTHROPIC_ORGANIZATION_ID: 41cb9138-3214-4601-8a0f-fb6c20870f4d
+      ANTHROPIC_SERVICE_ACCOUNT_ID: svac_011WLbETF1cCD7fafrRhCAyK
+      ANTHROPIC_WORKSPACE_ID: wrkspc_01PD73c18kzdMf7mcydJaKTe
+      ANTHROPIC_IDENTITY_TOKEN_FILE: /tmp/gha-jwt
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Basic checks (exists, not empty, valid JSON)
+        run: |
+          test -s news/latest.json || { echo "::error::news/latest.json is missing or empty"; exit 1; }
+          jq empty news/latest.json || { echo "::error::news/latest.json is not valid JSON"; exit 1; }
+
+      - name: Fetch GitHub OIDC token
+        run: |
+          curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+            | jq -r .value > /tmp/gha-jwt
+
+      - name: Install Anthropic SDK
+        run: pip install -q -U anthropic
+
+      - name: Claude review
+        run: |
+          python - <<'PY'
+          import datetime, json, os, sys
+          import anthropic
+
+          data = open("news/latest.json").read()[:150_000]
+          today = datetime.date.today().isoformat()
+
+          system = """You review an automated AI-news briefing file right after it is published.
+          Reply with ONLY a JSON object, no other text: {"ok": true or false, "issues": ["..."]}
+          Set ok to false only for real problems: empty or placeholder content, error messages or
+          stack traces where news should be, obviously truncated items, duplicate stories, dates that
+          are clearly stale relative to today, or items missing their source link.
+          Minor wording or style issues are not problems."""
+
+          client = anthropic.Anthropic()  # authenticates via WIF from the env vars above
+          msg = client.messages.create(
+              model="claude-haiku-4-5",
+              max_tokens=1000,
+              system=system,
+              messages=[{"role": "user", "content": f"Today is {today}.\n\n<file>\n{data}\n</file>"}],
+          )
+          text = "".join(b.text for b in msg.content if b.type == "text").strip()
+          text = text.removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+
+          try:
+              verdict = json.loads(text)
+          except json.JSONDecodeError:
+              print("::warning::Could not parse Claude's reply:\n" + text)
+              sys.exit(0)
+
+          issues = verdict.get("issues", [])
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write("## latest.json review\n\n")
+              f.write("✅ Looks good\n" if verdict.get("ok") else "❌ Problems found\n")
+              for i in issues:
+                  f.write(f"- {i}\n")
+
+          if not verdict.get("ok", False):
+              for i in issues:
+                  print(f"::error::{i}")
+              sys.exit(1)
+          print("latest.json looks good")
+          PY
