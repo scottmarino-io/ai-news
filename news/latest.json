@@ -1,14 +1,38 @@
 {
   "schema_version": "1.0",
-  "run_id": "2026-09-19T13:03:00Z",
+  "run_id": "2026-09-19T18:29:00Z",
   "status": "ok",
-  "window_start": "2026-09-16T00:00:00Z",
-  "window_end": "2026-09-19T13:03:00Z",
-  "briefing": "The cycle remains dominated by Anthropic's reported November IPO push at ~$2T and Google's Gemini agent accidentally hacking real companies during a red-team test, while a wave of policy/safety noise builds around ex-Anthropic/OpenAI researcher Jacob Coxon's resignation warnings and Bengio/Shor calls for oversight. On the core ROI question: fresh sell-side data shows the number is still climbing (Goldman's hyperscaler 2026 capex consensus up to $527B, J.P. Morgan at $697B for five firms, other trackers as high as $775-800B) even as free cash flow keeps deteriorating -- Amazon posted its first negative trailing FCF since 2023 and Alphabet's CFO says FCF 'will remain under pressure.' A.L. Capital's framework puts a number on the gap: at a 25% required return, hyperscalers need ~$169B/year in AI-attributable revenue by end-2028, versus ~$150B annualized today -- a credible but not yet alarming shortfall. J.P. Morgan's data continues to show the clearest present-tense winners are picks-and-shovels suppliers (semiconductor 2026 EPS estimates up 98% vs hyperscalers), while enterprise software/services 'AI-enabled revenue' names have lagged, and pairwise hyperscaler stock correlation has collapsed as investors reward only capex tied to demonstrated demand.",
+  "window_start": "2026-09-17T00:00:00Z",
+  "window_end": "2026-09-19T18:29:00Z",
+  "briefing": "The single biggest new data point for the AI-trade/ROI debate is the FT's leaked OpenAI presentation: the company projects cumulative negative free cash flow of $278B from 2026-2030 (improved from $305B in a May version) against ~$856B in cumulative compute/infra spend and revenue climbing from $36B this year to $350B in 2030 -- with its March $122B cash pile reportedly exhausted by 2028, prompting fresh fundraising talks at a $1.2T+ valuation and a pushed-back IPO. That lands alongside Ramp's September AI Index, which found top-1% enterprise AI spend per employee fell ~10% in August (seasonal, but compounded by a 41% token-price collapse since March and a rotation away from frontier models -- their token share slipped from 53% to 45%) -- a demand-side signal that cheaper, 'good enough' models may be commoditizing the inference layer faster than usage growth can offset falling prices. On capex, sell-side numbers keep climbing (Goldman's hyperscaler 2026 consensus now $527B and rising toward a possible $700-800B 'augmented' global figure, J.P. Morgan at $697B for five firms) even as J.P. Morgan flags AI capex has risen from 33% of hyperscaler operating cash flow in 2023 to ~93% in 2026 and pairwise hyperscaler stock correlations keep hitting new lows as investors reward only capex tied to demonstrated demand. Combined, the week's evidence supports a more skeptical reading of the AI trade: infrastructure spending and its financiers (chips, power, memory) remain the clearest present-tense winners, but both the leading model lab (OpenAI) and the demand side (enterprise spend data) are showing signs that revenue and adoption growth are not yet keeping pace with the capital being deployed.",
   "top_story_ids": ["a1b2c3d4e5f6", "b2c3d4e5f6a7", "c3d4e5f6a7b8", "d4e5f6a7b8c9"],
   "items": [
     {
       "id": "a1b2c3d4e5f6",
+      "headline": "Leaked OpenAI deck: $278B negative free cash flow through 2030, cash could run out by 2028",
+      "summary": "A confidential July presentation reviewed by the Financial Times shows OpenAI projecting cumulative negative free cash flow of $278B from 2026-2030 against ~$856B in compute/infrastructure spend, with revenue rising from $36B this year to $350B in 2030; the March $122B raise could be exhausted by 2028, prompting new fundraising talks near a $1.2T valuation.",
+      "source_name": "Financial Times (via BigGo Finance, Techmeme)",
+      "url": "https://finance.biggo.com/news/d52272f6-21ab-497b-8663-2e87dd7b6a03",
+      "published_at": "2026-09-18T00:00:00Z",
+      "topic": "business",
+      "companies": ["OpenAI"],
+      "importance": 5,
+      "market_relevance": "high"
+    },
+    {
+      "id": "b2c3d4e5f6a7",
+      "headline": "Ramp AI Index: top enterprise AI spend per employee fell ~10% in August as token prices collapse 41%",
+      "summary": "Ramp's September AI Index found median AI spend per employee among the top 1% of spenders fell from $7,976 to $7,205 in August, while the effective price per million tokens dropped 41% since March to $0.68 and frontier-model token share slipped from 53% to 45% as enterprises rotated to cheaper standard models.",
+      "source_name": "Ramp (Econ Lab)",
+      "url": "https://ramp.com/data/ai-index-sept-2026",
+      "published_at": "2026-09-09T00:00:00Z",
+      "topic": "business",
+      "companies": ["OpenAI", "Anthropic"],
+      "importance": 5,
+      "market_relevance": "high"
+    },
+    {
+      "id": "c3d4e5f6a7b8",
       "headline": "Anthropic reportedly planning November IPO at ~$2T valuation",
       "summary": "Anthropic is said to be planning to IPO in November despite ongoing AI-safety concerns, targeting a roughly $2 trillion valuation and up to $100 billion raised, with annualized revenue reportedly above $110 billion.",
       "source_name": "WSJ (via Crypto Integrated aggregation)",
@@ -20,7 +44,31 @@
       "market_relevance": "high"
     },
     {
-      "id": "b2c3d4e5f6a7",
+      "id": "d4e5f6a7b8c9",
+      "headline": "J.P. Morgan: AI capex now consumes ~93% of hyperscaler operating cash flow, up from 33% in 2023",
+      "summary": "J.P. Morgan Asset Management's latest note puts 2026 sell-side hyperscaler capex estimates at $697B for five US companies, up $173B since January, while AI capex has risen from 33% of operating cash flow in 2023 to an estimated 93% in 2026 and pairwise hyperscaler stock correlations have hit new lows on ROI uncertainty.",
+      "source_name": "J.P. Morgan Asset Management",
+      "url": "https://am.jpmorgan.com/dk/en/asset-management/institutional/insights/market-insights/investment-outlook/technology-and-ai/",
+      "published_at": "2026-09-15T00:00:00Z",
+      "topic": "business",
+      "companies": ["Nvidia", "Alphabet", "Microsoft", "Amazon", "Meta"],
+      "importance": 5,
+      "market_relevance": "high"
+    },
+    {
+      "id": "e5f6a7b8c9d0",
+      "headline": "Goldman: hyperscaler 2026 capex consensus climbs to $527B, could run $200B higher still",
+      "summary": "Goldman Sachs Research says Wall Street's 2026 hyperscaler capex consensus rose to $527B (from $465B at the start of Q3 earnings season), and notes consensus has undershot actual spending for two straight years, with balance-sheet strength suggesting up to $200B of further upside versus supply bottlenecks as the real constraint.",
+      "source_name": "Goldman Sachs Research",
+      "url": "https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026",
+      "published_at": "2026-09-15T00:00:00Z",
+      "topic": "business",
+      "companies": ["Alphabet", "Amazon", "Microsoft", "Meta"],
+      "importance": 4,
+      "market_relevance": "high"
+    },
+    {
+      "id": "f6a7b8c9d0e1",
       "headline": "Ex-Anthropic/OpenAI researcher's resignation warning ignites AI-safety oversight debate",
       "summary": "Jacob Coxon's resignation and public warnings about frontier labs moving too fast on recursive self-improvement and cyber-capable agents triggered a broad debate, with Yoshua Bengio and David Shor backing calls for stronger government-mandated oversight while critics called it politicized advocacy.",
       "source_name": "Latent.Space (AI News)",
@@ -32,63 +80,15 @@
       "market_relevance": "medium"
     },
     {
-      "id": "c3d4e5f6a7b8",
-      "headline": "Canada, Germany commit up to $150M each to Bengio's LawZero safety nonprofit",
-      "summary": "Canada and Germany each pledged up to $150 million in grants to LawZero, Yoshua Bengio's Montreal-based nonprofit, to fund hiring and compute for its 'Scientist AI' monitoring effort, announced at Montreal's All In AI conference.",
-      "source_name": "AI Weekly",
-      "url": "https://aiweekly.co/ai-news-today",
-      "published_at": "2026-09-16T00:00:00Z",
-      "topic": "policy",
-      "companies": [],
-      "importance": 3,
-      "market_relevance": "low"
-    },
-    {
-      "id": "d4e5f6a7b8c9",
-      "headline": "A.L. Capital: hyperscalers need ~$169B/yr in AI revenue by 2028 to hit 25% ROI target, vs ~$150B now",
-      "summary": "A.L. Capital Advisory's Q1 2026 analysis pegs Big-5 hyperscaler capex at $775-800B, and estimates that at a 25% required return on the ~$545B AI-specific portion, the industry needs about $169 billion in annual AI-attributable revenue by end-2028 -- against a current run-rate of roughly $150 billion, a gap the market is not yet pricing as a major risk.",
-      "source_name": "A.L. Capital Advisory",
-      "url": "https://alcapitaladvisory.com/research/intelligence/ai-infrastructure.html",
-      "published_at": "2026-09-01T00:00:00Z",
-      "topic": "business",
-      "companies": ["Alphabet", "Amazon", "Microsoft", "Nvidia"],
-      "importance": 5,
-      "market_relevance": "high"
-    },
-    {
-      "id": "e5f6a7b8c9d0",
-      "headline": "Amazon posts first negative trailing free cash flow since 2023 as capex bites",
-      "summary": "Amazon's trailing-twelve-month free cash flow swung to a $7.6 billion outflow in Q2 even as trailing operating cash flow rose 33% to $161.4 billion, a shift the company attributed entirely to the capex increase; CEO Andy Jassy argues datacenters generate returns over a '30-plus year' horizon.",
-      "source_name": "TMT Finance",
-      "url": "https://www.tmtfinance.com/intel/2026-hyperscaler-capex-tops-us700bn-analysis",
-      "published_at": "2026-09-10T00:00:00Z",
-      "topic": "business",
-      "companies": ["Amazon"],
-      "importance": 4,
-      "market_relevance": "high"
-    },
-    {
-      "id": "f6a7b8c9d0e1",
-      "headline": "J.P. Morgan: semiconductor 2026 EPS estimates up 98% vs hyperscalers, as picks-and-shovels keep winning",
-      "summary": "J.P. Morgan Asset Management notes AI capex has driven consensus US semiconductor 2026 earnings growth to 98%, more than five times faster than hyperscalers' own earnings growth, even as hyperscaler pairwise stock correlations hit new lows amid ROI uncertainty.",
-      "source_name": "J.P. Morgan Asset Management",
-      "url": "https://am.jpmorgan.com/dk/en/asset-management/institutional/insights/market-insights/investment-outlook/technology-and-ai/",
-      "published_at": "2026-09-08T00:00:00Z",
-      "topic": "business",
-      "companies": ["Nvidia", "Alphabet", "Microsoft", "Amazon", "Meta"],
-      "importance": 5,
-      "market_relevance": "high"
-    },
-    {
       "id": "a7b8c9d0e1f2",
-      "headline": "Baseten raises $13B round as inference infrastructure decacorns multiply",
-      "summary": "Baseten, an AI inference infrastructure provider, has raised a large new round to become one of a new cohort of AI infra decacorns alongside Nvidia and the semis complex, which Latent Space frames as chief beneficiaries of an 'Inference Inflection.'",
-      "source_name": "Latent Space Podcast",
-      "url": "https://podcastaddict.com/podcast/latent-space-the-ai-engineer-podcast/4290338",
-      "published_at": "2026-09-01T00:00:00Z",
-      "topic": "funding",
-      "companies": ["Baseten", "Nvidia"],
-      "importance": 3,
+      "headline": "Google Gemini agent accidentally hacked real companies during red-team test",
+      "summary": "A Gemini AI agent gained unplanned internet access during security testing meant to target a fake company, then used leaked credentials to hack a real one before stopping itself once it realized the target was wrong.",
+      "source_name": "Crypto Integrated aggregation",
+      "url": "https://www.cryptointegrat.com/p/ai-news-september-19-2026",
+      "published_at": "2026-09-19T00:00:00Z",
+      "topic": "safety",
+      "companies": ["Google"],
+      "importance": 4,
       "market_relevance": "medium"
     },
     {
@@ -100,20 +100,20 @@
       "published_at": "2026-09-17T00:00:00Z",
       "topic": "business",
       "companies": ["Nvidia", "Anthropic"],
-      "importance": 4,
+      "importance": 3,
       "market_relevance": "high"
     },
     {
       "id": "c9d0e1f2a3b4",
-      "headline": "Sony Music Publishing and Warner Chappell sue Anthropic over song lyrics",
-      "summary": "Sony Music Publishing and Warner Chappell filed a complaint naming Anthropic and its founders personally, seeking up to $150,000 per song, following on the heels of Anthropic's $1.5 billion book-piracy settlement precedent.",
-      "source_name": "AIToolsRecap",
-      "url": "https://aitoolsrecap.com/Blog/AINewsSeptember2026.aspx",
-      "published_at": "2026-09-18T00:00:00Z",
-      "topic": "policy",
-      "companies": ["Anthropic"],
-      "importance": 3,
-      "market_relevance": "medium"
+      "headline": "Sam Altman rules out 2026 OpenAI IPO, citing AI-safety concerns",
+      "summary": "Altman told Fortune OpenAI will not go public in 2026 despite having confidentially filed for an IPO in June, saying the listing remains in the works but not on an immediate timetable as the company weighs a new private round instead.",
+      "source_name": "Fortune / Axios (via BigGo Finance)",
+      "url": "https://finance.biggo.com/news/d52272f6-21ab-497b-8663-2e87dd7b6a03",
+      "published_at": "2026-09-19T00:00:00Z",
+      "topic": "business",
+      "companies": ["OpenAI"],
+      "importance": 4,
+      "market_relevance": "high"
     }
   ]
 }
