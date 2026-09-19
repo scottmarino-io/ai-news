@@ -1,0 +1,31 @@
+name: WIF test
+on: workflow_dispatch
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_FEDERATION_RULE_ID: fdrl_01Gqy4Wrg6hPR1gdCPHqL7DA
+      ANTHROPIC_SERVICE_ACCOUNT_ID: svac_011WLbETF1cCD7fafrRhCAyK
+      ANTHROPIC_ORGANIZATION_ID: 41cb9138-3214-4601-8a0f-fb6c20870f4d
+      ANTHROPIC_WORKSPACE_ID: wrkspc_01PD73c18kzdMf7mcydJaKTe
+      ANTHROPIC_IDENTITY_TOKEN_FILE: /tmp/gha-jwt
+    steps:
+      - name: Fetch GitHub OIDC token
+        run: |
+          curl -sS -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+            | jq -r .value > /tmp/gha-jwt
+      - run: pip install -U anthropic
+      - name: Call Claude
+        run: |
+          python -c "
+          import anthropic
+          m = anthropic.Anthropic().messages.create(
+              model='claude-haiku-4-5', max_tokens=50,
+              messages=[{'role':'user','content':'Say hello'}])
+          print(m.content[0].text)"
