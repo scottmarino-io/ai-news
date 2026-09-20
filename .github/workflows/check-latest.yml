@@ -131,7 +131,7 @@ jobs:
           ALLOWED = {
               "EMPTY_OR_PLACEHOLDER": "Empty or placeholder content",
               "ERROR_TEXT": "Error message or stack trace instead of news",
-              "TRUNCATED": "Item cut off mid-sentence or missing required fields",
+              "TRUNCATED": "Headline or summary text cut off mid-sentence",
               "DUPLICATE": "Same story appears more than once",
               "HEADLINE_MISMATCH": "Headline contradicts the item's own summary",
           }
@@ -148,10 +148,14 @@ jobs:
             judge whether a number, valuation, or event is plausible.
           - Dates, links, and IDs are checked separately by code. Do not report them.
           - Source quality (aggregators vs. original outlets) is NOT an issue.
+          - Required fields are checked separately by code. Do not report them.
+          - Tags and metadata (companies, tickers, topic, importance, confidence) are
+            never blocking. If you notice a problem with them, or anything else worth
+            flagging that fits no category above, report it with category "NOTE".
           - Do not report things that are fine. If nothing fits a category, return an empty list.
 
           Reply with ONLY this JSON, no other text:
-          {{"issues": [{{"item": "item id or headline", "category": "ONE_OF_THE_CATEGORIES", "detail": "short explanation"}}]}}"""
+          {{"issues": [{{"item": "item id or headline", "category": "ONE_OF_THE_CATEGORIES or NOTE", "detail": "short explanation"}}]}}"""
 
           client = anthropic.Anthropic()  # authenticates via WIF from the env vars above
           msg = client.messages.create(
