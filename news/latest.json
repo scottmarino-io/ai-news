@@ -1,86 +1,80 @@
 {
   "schema_version": "1.2",
-  "run_id": "2026-10-12T04:30:00Z",
+  "run_id": "2026-10-12T13:00:00Z",
   "status": "partial",
-  "status_note": "Short overnight window (Sun afternoon to Mon pre-dawn UTC) yielded almost no new, independently verifiable stories inside the window after screening out a large volume of Oct 9-11 reporting that fell just before window_start; only one item cleared the sourcing and window bar.",
-  "window_start": "2026-10-11T13:10:00Z",
-  "window_end": "2026-10-12T04:30:00Z",
-  "briefing": "A very quiet stretch for verifiable new reporting: the one confirmed in-window story is that more Silicon Valley leaders, including Microsoft's Satya Nadella and Nvidia, have adopted the Trump administration's push to rebrand AI as 'super intelligence,' following Musk and Salesforce's Marc Benioff. This is a political-alignment signal rather than new capex or revenue evidence, so it does not move the standing ROI verdict. The more substantive threads from the prior 24-48 hours (Nvidia-Reflection AI talks, Nadella's 'emergency brake' call, OpenAI's revenue-accounting discrepancy, Broadcom/Oracle/SpaceX chip financing, and a third Yandex data-center drone strike) remain the operative context but were already captured in the prior run or fell outside this run's window.",
+  "status_note": "Short daytime window (Mon 04:30-13:00 UTC) yielded only one clearly in-window, independently sourced story after screening out a heavy volume of Oct 10-11 reporting (Amazon/Decart talks, Nvidia/Reflection AI talks, OpenAI revenue-accounting follow-ups, White House AI incident-reporting mandate, Yandex drone strikes) that fell just before window_start or lacked a precise in-window timestamp.",
+  "window_start": "2026-10-12T04:30:00Z",
+  "window_end": "2026-10-12T13:00:00Z",
+  "briefing": "The one confirmed in-window development is that Anthropic has quietly signed an undisclosed multiyear cloud-computing deal with former bitcoin miner IREN, part of roughly $530 billion in data-center leases Anthropic is racing to bring online, with The Information estimating that activating a single 245-megawatt site a month early could add over $1.3 billion in revenue. This is a direct, dollar-sized evidence point for the standing ROI question: a frontier lab is paying a premium to accelerate capacity because incremental compute appears to convert quickly into incremental revenue. It lands alongside unresolved prior-run threads on OpenAI's revenue-accounting discrepancy and heavy hyperscaler financing activity, which continue to temper the infrastructure-versus-revenue debate. No new hyperscaler capex guidance, lab earnings, or enterprise ROI disclosures appeared in this window.", 
   "top_story_ids": [
-    "7ec8afeed353"
+    "b99b785165ef"
   ],
   "roi_analysis": {
     "stance": "mixed",
-    "verdict": "No new capex, revenue, or enterprise-adoption evidence landed in this short window; the standing picture is unchanged from the prior run: compute demand and lab revenue growth remain real, but reliability costs, financing complexity, and valuation scrutiny are rising in parallel.",
+    "verdict": "Compute demand remains strong enough that labs like Anthropic are paying to accelerate data-center activation because each incremental megawatt appears to convert quickly into revenue, but financing complexity, valuation scrutiny, and revenue-accounting ambiguity at the lab layer still temper confidence that the spend is cleanly paying off everywhere.",
     "supporting_points": [
+      "Anthropic is pushing partners to accelerate construction across roughly $530 billion in data-center leases because bringing a single 245-megawatt site online a month early could add more than $1.3 billion in revenue, implying compute capacity is currently revenue-constrained rather than demand-constrained (The Information, via AI Weekly).",
       "Nvidia continues to expand its equity and infrastructure ties across the AI ecosystem, including reported talks to deepen its investment in Reflection AI, a sign of sustained capital commitment from the industry's chip supplier (prior run; Bloomberg).",
       "Hyperscalers and labs keep signing large compute and financing commitments (e.g., Broadcom's reported $50 billion-plus financing push for OpenAI's custom chips, and Oracle and SpaceX's parallel debt talks), indicating continued confidence in future demand even as financing shifts toward private credit (prior run background; WSJ)."
     ],
     "counter_points": [
+      "Anthropic's data-center build-out increasingly depends on former bitcoin miners holding scarce grid connections rather than traditional hyperscalers, a sign that premium, less-proven counterparties are now needed to keep the capacity pipeline on schedule (The Information, via AI Weekly).",
       "OpenAI's own disclosed annualized revenue was reported roughly $20 billion below a widely cited $70 billion figure once accounting methodology was clarified, undercutting confidence in headline comparisons used to justify valuations (prior run background; Bloomberg, Axios).",
-      "A hyperscaler CEO (Microsoft's Nadella) has now publicly said AI models must be assumed 'compromised' and contained with mandatory kill-switches, an implicit admission that agentic reliability has not caught up with deployment (prior run; TechCrunch).",
       "The shift toward private credit and off-balance-sheet financing for chip purchases (Broadcom, Oracle, SpaceX) signals that even large, well-capitalized players are straining to fund the buildout through conventional means (prior run background; WSJ)."
     ],
     "by_layer": {
-      "infrastructure": "No new infrastructure-specific capex or revenue data emerged this window; the prior run's signals of both continued investment and financing strain stand.",
-      "labs": "No new lab-level disclosures this window; the previously reported OpenAI/Anthropic revenue-accounting discrepancy remains the key open question for investors ahead of expected IPOs.",
+      "infrastructure": "Neoclouds and former crypto miners are becoming load-bearing suppliers of scarce grid capacity, with per-site activation timing now estimated in billions of dollars of revenue impact for lab customers.",
+      "labs": "Anthropic's aggressive leasing pace suggests revenue is scaling with capacity additions, but the prior run's OpenAI revenue-accounting discrepancy remains the key unresolved transparency issue ahead of expected IPOs.",
       "enterprise": "No new enterprise adoption or ROI data points emerged this window."
     },
-    "what_changed": "No material change: the sole new item (Silicon Valley adopting the administration's 'super intelligence' branding) is a political-alignment signal, not new financial or adoption evidence, so the mixed stance carries over unchanged from the prior run."
+    "what_changed": "A new, dollar-quantified data point (IREN/Anthropic deal and the $1.3B-per-month-of-delay estimate) strengthens the infrastructure-layer case that compute scarcity, not lack of demand, is the binding constraint, but it does not resolve the labs-layer revenue-transparency concerns carried over from the prior run, so the overall mixed stance is unchanged."
   },
   "gpu_price_index": {
-    "as_of": "2026-10-08T00:00:00Z",
+    "as_of": "2026-10-09T00:00:00Z",
     "source": "Mercatus GPU Price Index",
     "gpus": [
       {
         "model": "H100",
         "display_name": "H100",
-        "latest": 3.9522,
-        "change_7d_pct": 1.5
+        "latest": 3.9636,
+        "change_7d_pct": 1.8
       },
       {
         "model": "H200",
         "display_name": "H200",
-        "latest": 4.9432,
-        "change_7d_pct": 2.7
+        "latest": 4.9956,
+        "change_7d_pct": 3.8
       },
       {
         "model": "B200",
         "display_name": "B200",
-        "latest": 6.7284,
-        "change_7d_pct": -0.1
+        "latest": 6.7403,
+        "change_7d_pct": 0.0
       },
       {
         "model": "B300",
         "display_name": "B300",
-        "latest": 8.81,
-        "change_7d_pct": 1.2
+        "latest": 8.8509,
+        "change_7d_pct": 1.7
       }
     ]
   },
   "items": [
     {
-      "id": "7ec8afeed353",
-      "headline": "Nadella and Nvidia join Musk, Benioff in adopting 'super intelligence' label",
-      "summary": "Following Trump's executive order and social-media threat to treat continued use of 'artificial intelligence' as hostile to the White House, Microsoft's Satya Nadella and Nvidia joined Elon Musk and Salesforce's Marc Benioff in publicly adopting the administration's preferred 'super intelligence' terminology, with Nvidia tying its $1 billion science commitment to the new label.",
-      "why_it_matters": "Widespread corporate adoption of the administration's preferred framing signals how closely major AI vendors are aligning with the White House ahead of policy decisions that could affect chip exports, data-center permitting, and AI regulation.",
-      "source_name": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
-      "published_at": "2026-10-11T18:33:56Z",
-      "topic": "policy",
-      "companies": [
-        "Microsoft",
-        "Nvidia",
-        "SpaceX / xAI"
-      ],
-      "tickers": [
-        "MSFT",
-        "NVDA"
-      ],
-      "importance": 2,
-      "market_relevance": "low",
-      "confidence": "high",
-      "confidence_note": ""
+      "id": "b99b785165ef",
+      "headline": "Anthropic quietly signs multiyear cloud deal with miner-turned-AI-host IREN",
+      "summary": "The Information reported that Anthropic has an undisclosed multiyear AI cloud agreement with IREN, a former bitcoin miner now building AI data centers, as part of roughly $530 billion in leases Anthropic is racing to activate; the report estimates that bringing one 245-megawatt site online a month early would add over $1.3 billion in revenue.",
+      "why_it_matters": "A lab paying to accelerate capacity activation because of billion-dollar-per-month revenue upside is a direct, quantified signal that compute remains revenue-constrained rather than demand-constrained, supporting the infrastructure-layer ROI case.",
+      "source_name": "Dataconomy",
+      "url": "https://dataconomy.com/2026/10/12/anthropic-reportedly-signs-multiyear-cloud-deal-with-iren/",
+      "published_at": "2026-10-12T06:00:00Z",
+      "topic": "capex_deals",
+      "companies": ["Anthropic", "IREN"],
+      "tickers": ["IREN"],
+      "importance": 4,
+      "market_relevance": "high",
+      "confidence": "medium",
+      "confidence_note": "Based on The Information's reporting citing people familiar with the relationship; neither Anthropic nor IREN has publicly confirmed the agreement or disclosed its value."
     }
   ]
 }
