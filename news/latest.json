@@ -1,34 +1,32 @@
 {
   "schema_version": "1.2",
-  "run_id": "2026-10-11T13:10:00Z",
+  "run_id": "2026-10-12T04:30:00Z",
   "status": "partial",
-  "status_note": "Weekend news cycle (Sat Oct 10 - Sun Oct 11) produced far fewer verifiably in-window, non-aggregator primary stories than usual; only 3 items met sourcing and window standards after discarding numerous Oct 9 stories that fell just before this run's window.",
-  "window_start": "2026-10-10T13:08:25Z",
-  "window_end": "2026-10-11T13:10:00Z",
-  "briefing": "A quiet weekend news cycle still produced two signals relevant to the AI trade: Nvidia is reportedly in early talks to deepen its investment in or acquire open-weight startup Reflection AI, extending its pattern of locking in downstream demand and equity stakes across the ecosystem it supplies. Separately, Microsoft CEO Satya Nadella publicly called for AI 'emergency brake' containment architecture, the latest major executive to react to the string of agentic-AI misbehavior disclosures from Anthropic and OpenAI covered in recent runs. Apple also disclosed a smaller reverse acqui-hire of defunct podcast startup Huxe. None of this changes the standing mixed verdict, but Nadella's statement is notable as infrastructure-provider-level acknowledgment that agent containment, not just capability, is now a cost of doing business.",
+  "status_note": "Short overnight window (Sun afternoon to Mon pre-dawn UTC) yielded almost no new, independently verifiable stories inside the window after screening out a large volume of Oct 9-11 reporting that fell just before window_start; only one item cleared the sourcing and window bar.",
+  "window_start": "2026-10-11T13:10:00Z",
+  "window_end": "2026-10-12T04:30:00Z",
+  "briefing": "A very quiet stretch for verifiable new reporting: the one confirmed in-window story is that more Silicon Valley leaders, including Microsoft's Satya Nadella and Nvidia, have adopted the Trump administration's push to rebrand AI as 'super intelligence,' following Musk and Salesforce's Marc Benioff. This is a political-alignment signal rather than new capex or revenue evidence, so it does not move the standing ROI verdict. The more substantive threads from the prior 24-48 hours (Nvidia-Reflection AI talks, Nadella's 'emergency brake' call, OpenAI's revenue-accounting discrepancy, Broadcom/Oracle/SpaceX chip financing, and a third Yandex data-center drone strike) remain the operative context but were already captured in the prior run or fell outside this run's window.",
   "top_story_ids": [
-    "5d1fa9f9d816",
-    "d05facb80f7a"
+    "7ec8afeed353"
   ],
   "roi_analysis": {
     "stance": "mixed",
-    "verdict": "Compute demand and lab revenue growth remain real, but new reporting on how OpenAI and Anthropic each count revenue shows headline comparisons are less reliable than investors assumed, while a Microsoft CEO publicly admitting AI agents must be assumed compromised underscores that reliability costs are becoming a visible line item rather than a footnote.",
+    "verdict": "No new capex, revenue, or enterprise-adoption evidence landed in this short window; the standing picture is unchanged from the prior run: compute demand and lab revenue growth remain real, but reliability costs, financing complexity, and valuation scrutiny are rising in parallel.",
     "supporting_points": [
-      "Nvidia is reportedly in talks to deepen its roughly $800 million investment in open-weight startup Reflection AI or acquire it outright, a sign the chipmaker keeps extending capital into the ecosystem it supplies as demand evidence (Bloomberg, Financial Times).",
-      "OpenAI's own investor materials still point to fast growth, with a prior-run disclosure of 77% total revenue growth and 107% enterprise revenue growth, even after a separate reporting correction cut its annualized-revenue figure by about $20 billion (CNBC, prior run; Axios, background).",
-      "Apple continues making small AI talent-and-technology acquisitions (its reverse acqui-hire of podcast startup Huxe) even amid a broader slowdown in big M&A, showing continued corporate appetite to buy AI capability cheaply (TechCrunch)."
+      "Nvidia continues to expand its equity and infrastructure ties across the AI ecosystem, including reported talks to deepen its investment in Reflection AI, a sign of sustained capital commitment from the industry's chip supplier (prior run; Bloomberg).",
+      "Hyperscalers and labs keep signing large compute and financing commitments (e.g., Broadcom's reported $50 billion-plus financing push for OpenAI's custom chips, and Oracle and SpaceX's parallel debt talks), indicating continued confidence in future demand even as financing shifts toward private credit (prior run background; WSJ)."
     ],
     "counter_points": [
-      "Bloomberg reporting (used here as background, not as an item) found Anthropic books gross cloud-partner sales as revenue while OpenAI books only its net share, meaning the widely cited $70 billion OpenAI figure was not comparable to Anthropic's $65 billion and overstated OpenAI's run rate by roughly $20 billion, undercutting confidence in the revenue numbers underpinning both companies' valuations.",
-      "Microsoft CEO Satya Nadella publicly called for AI systems to be treated as 'compromised' by default, with mandatory kill-switches, tamper-proof logs and independent audits, an unusually blunt admission from a hyperscaler whose own Azure, Copilot and OpenAI-hosting businesses depend on agentic reliability (TechCrunch).",
-      "The Nvidia-Reflection AI talks remain exploratory with no confirmed terms, illustrating that even large strategic AI deals are still provisional rather than closed, bankable transactions (Bloomberg)."
+      "OpenAI's own disclosed annualized revenue was reported roughly $20 billion below a widely cited $70 billion figure once accounting methodology was clarified, undercutting confidence in headline comparisons used to justify valuations (prior run background; Bloomberg, Axios).",
+      "A hyperscaler CEO (Microsoft's Nadella) has now publicly said AI models must be assumed 'compromised' and contained with mandatory kill-switches, an implicit admission that agentic reliability has not caught up with deployment (prior run; TechCrunch).",
+      "The shift toward private credit and off-balance-sheet financing for chip purchases (Broadcom, Oracle, SpaceX) signals that even large, well-capitalized players are straining to fund the buildout through conventional means (prior run background; WSJ)."
     ],
     "by_layer": {
-      "infrastructure": "Nvidia continues deepening financial ties to downstream AI startups it supplies, a pattern that recycles chip revenue into equity stakes rather than fully external demand.",
-      "labs": "A revenue-accounting discrepancy between OpenAI and Anthropic, surfaced in recent reporting, shows headline run-rate comparisons between the two leading labs are less apples-to-apples than investors had assumed ahead of expected IPOs.",
-      "enterprise": "No new enterprise ROI disclosures landed this window; the dominant enterprise-relevant signal was Microsoft's own CEO saying AI agents must be assumed compromised and contained by design, an implicit admission that reliability, not just capability, now gates adoption."
+      "infrastructure": "No new infrastructure-specific capex or revenue data emerged this window; the prior run's signals of both continued investment and financing strain stand.",
+      "labs": "No new lab-level disclosures this window; the previously reported OpenAI/Anthropic revenue-accounting discrepancy remains the key open question for investors ahead of expected IPOs.",
+      "enterprise": "No new enterprise adoption or ROI data points emerged this window."
     },
-    "what_changed": "New this run: a hyperscaler CEO (Nadella) went further than prior safety statements by calling for mandatory kill-switches and assuming all models are compromised, and Nvidia's investment pattern extended to a new potential deal with Reflection AI; stance holds at mixed with no new evidence strong enough to shift it toward supported or challenged."
+    "what_changed": "No material change: the sole new item (Silicon Valley adopting the administration's 'super intelligence' branding) is a political-alignment signal, not new financial or adoption evidence, so the mixed stance carries over unchanged from the prior run."
   },
   "gpu_price_index": {
     "as_of": "2026-10-08T00:00:00Z",
@@ -44,84 +42,45 @@
         "model": "H200",
         "display_name": "H200",
         "latest": 4.9432,
-        "change_7d_pct": 3.0
+        "change_7d_pct": 2.7
       },
       {
         "model": "B200",
         "display_name": "B200",
         "latest": 6.7284,
-        "change_7d_pct": 0.2
+        "change_7d_pct": -0.1
       },
       {
         "model": "B300",
         "display_name": "B300",
         "latest": 8.81,
-        "change_7d_pct": 2.0
+        "change_7d_pct": 1.2
       }
     ]
   },
   "items": [
     {
-      "id": "5d1fa9f9d816",
-      "headline": "Nvidia in early talks to deepen stake in or acquire Reflection AI",
-      "summary": "Nvidia is reportedly weighing a larger investment in open-weight AI startup Reflection AI or an acquisition, potentially structured as an acqui-hire to avoid lengthy antitrust review, according to the Financial Times; Nvidia has already invested about $800 million in the company.",
-      "why_it_matters": "A chipmaker expanding equity stakes in the startups it supplies blurs the line between external AI demand and self-reinforcing capital flows, a key question for assessing whether AI infrastructure spending reflects independent demand.",
-      "source_name": "Bloomberg",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-10/nvidia-is-in-talks-to-acquire-reflection-ai-the-ft-reports",
-      "published_at": "2026-10-10T19:00:00Z",
-      "topic": "funding_ma",
-      "companies": [
-        "Nvidia"
-      ],
-      "tickers": [
-        "NVDA"
-      ],
-      "importance": 3,
-      "market_relevance": "medium",
-      "confidence": "medium",
-      "confidence_note": "Based on Financial Times sourcing relayed by Bloomberg citing unnamed people familiar with the matter; talks are early and neither company confirmed terms."
-    },
-    {
-      "id": "d05facb80f7a",
-      "headline": "Nadella calls for AI 'emergency brake,' says assume models are compromised",
-      "summary": "Microsoft CEO Satya Nadella posted that AI builders should assume every model is compromised and design mandatory kill-switches, tamper-proof action logs and independent audits, following a string of disclosed agentic AI incidents at Anthropic and OpenAI and a new White House incident-disclosure mandate.",
-      "why_it_matters": "A hyperscaler CEO whose business depends on agentic AI reliability publicly conceding models must be contained as if compromised signals that containment costs, not just capability gains, are now part of the AI investment case.",
-      "source_name": "TechCrunch",
-      "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
-      "published_at": "2026-10-10T16:00:00Z",
+      "id": "7ec8afeed353",
+      "headline": "Nadella and Nvidia join Musk, Benioff in adopting 'super intelligence' label",
+      "summary": "Following Trump's executive order and social-media threat to treat continued use of 'artificial intelligence' as hostile to the White House, Microsoft's Satya Nadella and Nvidia joined Elon Musk and Salesforce's Marc Benioff in publicly adopting the administration's preferred 'super intelligence' terminology, with Nvidia tying its $1 billion science commitment to the new label.",
+      "why_it_matters": "Widespread corporate adoption of the administration's preferred framing signals how closely major AI vendors are aligning with the White House ahead of policy decisions that could affect chip exports, data-center permitting, and AI regulation.",
+      "source_name": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+      "published_at": "2026-10-11T18:33:56Z",
       "topic": "policy",
       "companies": [
         "Microsoft",
-        "Anthropic",
-        "OpenAI"
+        "Nvidia",
+        "SpaceX / xAI"
       ],
       "tickers": [
-        "MSFT"
-      ],
-      "importance": 4,
-      "market_relevance": "medium",
-      "confidence": "high",
-      "confidence_note": ""
-    },
-    {
-      "id": "9fe15a12a7df",
-      "headline": "Apple discloses reverse acqui-hire of defunct podcast startup Huxe",
-      "summary": "Apple told the European Commission it will make employment offers to certain employees of shuttered personalized-audio startup Huxe and receive a non-exclusive license to its IP, in what TechCrunch describes as at least Apple's fourth AI-related talent transaction of the year.",
-      "why_it_matters": "Continued small AI talent-and-IP acquisitions by a cash-rich hyperscaler show ongoing deal appetite even as marquee AI IPOs and mega-rounds face more scrutiny.",
-      "source_name": "TechCrunch",
-      "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
-      "published_at": "2026-10-10T18:00:00Z",
-      "topic": "funding_ma",
-      "companies": [
-        "Apple"
-      ],
-      "tickers": [
-        "AAPL"
+        "MSFT",
+        "NVDA"
       ],
       "importance": 2,
       "market_relevance": "low",
-      "confidence": "medium",
-      "confidence_note": "Deal terms and financial consideration were not disclosed in Apple's regulatory filing."
+      "confidence": "high",
+      "confidence_note": ""
     }
   ]
 }
