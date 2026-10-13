@@ -1,80 +1,148 @@
 {
   "schema_version": "1.2",
-  "run_id": "2026-10-12T13:00:00Z",
-  "status": "partial",
-  "status_note": "Short daytime window (Mon 04:30-13:00 UTC) yielded only one clearly in-window, independently sourced story after screening out a heavy volume of Oct 10-11 reporting (Amazon/Decart talks, Nvidia/Reflection AI talks, OpenAI revenue-accounting follow-ups, White House AI incident-reporting mandate, Yandex drone strikes) that fell just before window_start or lacked a precise in-window timestamp.",
-  "window_start": "2026-10-12T04:30:00Z",
-  "window_end": "2026-10-12T13:00:00Z",
-  "briefing": "The one confirmed in-window development is that Anthropic has quietly signed an undisclosed multiyear cloud-computing deal with former bitcoin miner IREN, part of roughly $530 billion in data-center leases Anthropic is racing to bring online, with The Information estimating that activating a single 245-megawatt site a month early could add over $1.3 billion in revenue. This is a direct, dollar-sized evidence point for the standing ROI question: a frontier lab is paying a premium to accelerate capacity because incremental compute appears to convert quickly into incremental revenue. It lands alongside unresolved prior-run threads on OpenAI's revenue-accounting discrepancy and heavy hyperscaler financing activity, which continue to temper the infrastructure-versus-revenue debate. No new hyperscaler capex guidance, lab earnings, or enterprise ROI disclosures appeared in this window.", 
+  "run_id": "2026-10-13T13:10:00Z",
+  "status": "ok",
+  "status_note": "",
+  "window_start": "2026-10-12T13:00:00Z",
+  "window_end": "2026-10-13T13:10:00Z",
+  "briefing": "The IMF's October Global Financial Stability Report named an AI-driven equity correction a top near-term threat to world financial stability, citing $300B of equity and $650B of debt channeled into weaker AI firms for $1.4T in future revenue commitments, hours after Broadcom CEO Hock Tan likened many AI investors to casino gamblers and triggered a sharp Asia chip selloff. Microsoft unveiled its Maia 300 inference chip, underscoring hyperscalers' push to control more of the AI stack and capture more economics from the buildout. Tencent launched a $5B bond explicitly to fund AI capex, and new IDC data showed Nvidia's China AI-chip share collapsing to 34% as Huawei closes the gap. Together the evidence this run leans toward financing and valuation stress building even as infrastructure demand and revenue-generating capacity additions continue.",
   "top_story_ids": [
-    "b99b785165ef"
+    "006076dc9b28",
+    "4b07bfbc0239",
+    "9e473449adbd"
   ],
   "roi_analysis": {
     "stance": "mixed",
-    "verdict": "Compute demand remains strong enough that labs like Anthropic are paying to accelerate data-center activation because each incremental megawatt appears to convert quickly into revenue, but financing complexity, valuation scrutiny, and revenue-accounting ambiguity at the lab layer still temper confidence that the spend is cleanly paying off everywhere.",
+    "verdict": "Infrastructure demand and revenue signals remain genuinely strong, but financing structures, valuation complacency, and now an explicit IMF financial-stability warning show the gap between AI capex and proven, durable returns is wide enough to pose systemic risk if growth disappoints.",
     "supporting_points": [
-      "Anthropic is pushing partners to accelerate construction across roughly $530 billion in data-center leases because bringing a single 245-megawatt site online a month early could add more than $1.3 billion in revenue, implying compute capacity is currently revenue-constrained rather than demand-constrained (The Information, via AI Weekly).",
-      "Nvidia continues to expand its equity and infrastructure ties across the AI ecosystem, including reported talks to deepen its investment in Reflection AI, a sign of sustained capital commitment from the industry's chip supplier (prior run; Bloomberg).",
-      "Hyperscalers and labs keep signing large compute and financing commitments (e.g., Broadcom's reported $50 billion-plus financing push for OpenAI's custom chips, and Oracle and SpaceX's parallel debt talks), indicating continued confidence in future demand even as financing shifts toward private credit (prior run background; WSJ)."
+      "Microsoft's new Maia 300 chip claims 40% more tokens per megawatt than leading GPU systems and is aimed at cutting inference costs at multi-gigawatt scale starting 2027, a concrete efficiency gain rather than just more spending (Axios).",
+      "Broadcom CEO Hock Tan said frontier labs Anthropic and OpenAI have already shown they can generate significant revenue from their latest models deployed as AI personal assistants, even as he voiced skepticism about investor understanding (Investing.com/Reuters).",
+      "Tencent's capex has surged 176% year-over-year on AI compute and data centers, and it is willing to tap debt markets specifically to fund that buildout rather than slow spending, signaling continued conviction in demand (Bloomberg).",
+      "Anthropic's prior-run IREN cloud deal and $530B leasing pace show labs are still paying to accelerate capacity because incremental compute converts quickly into revenue (prior run; The Information)."
     ],
     "counter_points": [
-      "Anthropic's data-center build-out increasingly depends on former bitcoin miners holding scarce grid connections rather than traditional hyperscalers, a sign that premium, less-proven counterparties are now needed to keep the capacity pipeline on schedule (The Information, via AI Weekly).",
-      "OpenAI's own disclosed annualized revenue was reported roughly $20 billion below a widely cited $70 billion figure once accounting methodology was clarified, undercutting confidence in headline comparisons used to justify valuations (prior run background; Bloomberg, Axios).",
-      "The shift toward private credit and off-balance-sheet financing for chip purchases (Broadcom, Oracle, SpaceX) signals that even large, well-capitalized players are straining to fund the buildout through conventional means (prior run background; WSJ)."
+      "The IMF's October 2026 GFSR names an AI share-price correction a top-three near-term risk to global financial stability, citing 14 deals since 2023 pairing $300B of equity and $650B of debt against AI firms for just $1.4T of future revenue commitments, much of it circular financing between hyperscalers and weaker partners (Benzinga/IMF).",
+      "Broadcom's own CEO, whose company is arranging roughly $145B in AI chip financing, said many AI investors \"have no clue what they are investing in\" and compared enterprise AI token spending to a child burning through arcade tokens with nothing to show for it, and said capital — not chips — may become the industry's biggest constraint (Investing.com/Reuters).",
+      "The casino remark triggered a sharp Asia tech selloff, with South Korea's Kospi and Japan's Nikkei both falling sharply and Samsung and SK Hynix down nearly 9-10% intraday, showing how fragile investor confidence in the AI capex thesis currently is (prior search context; Bloomberg via Dealroom).",
+      "Nvidia's share of China's data-center AI chip market collapsed to 34% in H1 2026 from 55% in all of 2025, with shipments down 44% year-over-year, as Huawei's share nearly doubled to 28% — a structural loss of share in a major market, not just a cyclical dip (Reuters/Business Recorder)."
     ],
     "by_layer": {
-      "infrastructure": "Neoclouds and former crypto miners are becoming load-bearing suppliers of scarce grid capacity, with per-site activation timing now estimated in billions of dollars of revenue impact for lab customers.",
-      "labs": "Anthropic's aggressive leasing pace suggests revenue is scaling with capacity additions, but the prior run's OpenAI revenue-accounting discrepancy remains the key unresolved transparency issue ahead of expected IPOs.",
-      "enterprise": "No new enterprise adoption or ROI data points emerged this window."
+      "infrastructure": "Chipmakers and hyperscalers keep adding capacity and diversifying silicon (Microsoft Maia 300, Tencent's debt-funded AI capex), but the IMF and Broadcom's own CEO are now flagging financing and capital availability, not chip supply, as the binding constraint.",
+      "labs": "Frontier labs are demonstrating real revenue traction (Anthropic, OpenAI per Broadcom's CEO), but their growth is increasingly underwritten by circular hyperscaler financing the IMF says could create \"wrong-way risk\" if AI profitability disappoints.",
+      "enterprise": "Broadcom's CEO publicly questioned whether enterprises are getting value from AI token spending, comparing it to wasted arcade tokens, a notable admission from a direct beneficiary of the buildout."
     },
-    "what_changed": "A new, dollar-quantified data point (IREN/Anthropic deal and the $1.3B-per-month-of-delay estimate) strengthens the infrastructure-layer case that compute scarcity, not lack of demand, is the binding constraint, but it does not resolve the labs-layer revenue-transparency concerns carried over from the prior run, so the overall mixed stance is unchanged."
+    "what_changed": "This run adds the first explicit systemic-risk framing from an official body (the IMF) alongside a market-moving skepticism comment from an AI-infrastructure insider (Broadcom's CEO), both pointing to financing fragility; the stance stays mixed but the risk balance has tilted modestly toward the counter-case versus the prior run's infrastructure-led optimism."
   },
   "gpu_price_index": {
-    "as_of": "2026-10-09T00:00:00Z",
+    "as_of": "2026-10-10T00:00:00Z",
     "source": "Mercatus GPU Price Index",
     "gpus": [
       {
         "model": "H100",
         "display_name": "H100",
-        "latest": 3.9636,
-        "change_7d_pct": 1.8
+        "latest": 3.9877,
+        "change_7d_pct": 2.3
       },
       {
         "model": "H200",
         "display_name": "H200",
-        "latest": 4.9956,
-        "change_7d_pct": 3.8
+        "latest": 4.9972,
+        "change_7d_pct": 3.0
       },
       {
         "model": "B200",
         "display_name": "B200",
-        "latest": 6.7403,
-        "change_7d_pct": 0.0
+        "latest": 6.7653,
+        "change_7d_pct": 0.3
       },
       {
         "model": "B300",
         "display_name": "B300",
-        "latest": 8.8509,
-        "change_7d_pct": 1.7
+        "latest": 8.8764,
+        "change_7d_pct": 1.6
       }
     ]
   },
   "items": [
     {
-      "id": "b99b785165ef",
-      "headline": "Anthropic quietly signs multiyear cloud deal with miner-turned-AI-host IREN",
-      "summary": "The Information reported that Anthropic has an undisclosed multiyear AI cloud agreement with IREN, a former bitcoin miner now building AI data centers, as part of roughly $530 billion in leases Anthropic is racing to activate; the report estimates that bringing one 245-megawatt site online a month early would add over $1.3 billion in revenue.",
-      "why_it_matters": "A lab paying to accelerate capacity activation because of billion-dollar-per-month revenue upside is a direct, quantified signal that compute remains revenue-constrained rather than demand-constrained, supporting the infrastructure-layer ROI case.",
-      "source_name": "Dataconomy",
-      "url": "https://dataconomy.com/2026/10/12/anthropic-reportedly-signs-multiyear-cloud-deal-with-iren/",
-      "published_at": "2026-10-12T06:00:00Z",
-      "topic": "capex_deals",
-      "companies": ["Anthropic", "IREN"],
-      "tickers": ["IREN"],
+      "id": "006076dc9b28",
+      "headline": "IMF names AI stock correction a top risk to global financial stability",
+      "summary": "The IMF's October 2026 Global Financial Stability Report, released at the Bangkok Annual Meetings, identified an AI-valuation correction as one of three salient near-term risks, flagging $300B of equity and $650B of debt channeled by hyperscalers into financially weaker AI firms in exchange for $1.4T of future revenue commitments.",
+      "why_it_matters": "An official international body has now formally flagged the AI financing structure itself as a systemic risk, directly challenging the assumption that current AI capex levels are safely matched to realized returns.",
+      "source_name": "Benzinga",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62317422/ai-stock-crash-could-trigger-global-market-turmoil-warns-imf-as-debt-and-cyber-risks-mount-resilience-is-not-safety",
+      "published_at": "2026-10-13T00:00:00Z",
+      "topic": "policy",
+      "companies": ["Nvidia", "Microsoft", "Amazon", "Alphabet", "Meta", "Oracle"],
+      "tickers": ["NVDA", "MSFT", "AMZN", "GOOGL", "META", "ORCL"],
+      "importance": 5,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "4b07bfbc0239",
+      "headline": "Broadcom's Hock Tan likens AI investors to casino gamblers",
+      "summary": "Broadcom CEO Hock Tan said at a Singapore panel that capital, not chip supply, will be the biggest constraint on AI growth, and that many AI investors \"have no clue what they're investing in\" and resemble casino gamblers, even while crediting Anthropic and OpenAI with generating real revenue from deployed models.",
+      "why_it_matters": "A direct beneficiary and financier of the AI buildout publicly questioning investor understanding and enterprise AI value is a notable insider signal of valuation and financing anxiety.",
+      "source_name": "Reuters",
+      "url": "https://www.investing.com/news/stock-market-news/broadcom-ceo-sees-capital-hurdle-to-ai-growth-casino-in-ai-investing-4945686",
+      "published_at": "2026-10-13T03:46:00Z",
+      "topic": "funding_ma",
+      "companies": ["Broadcom", "OpenAI", "Anthropic"],
+      "tickers": ["AVGO"],
+      "importance": 5,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "9e473449adbd",
+      "headline": "Microsoft unveils Maia 300 chip to cut Nvidia reliance for inference",
+      "summary": "Microsoft unveiled its third-generation Maia 300 AI accelerator, claiming 40% more tokens per megawatt than leading GPU systems, with multi-gigawatt deployment starting in 2027 as the primary inference engine behind Copilot and other Microsoft products.",
+      "why_it_matters": "Every major Nvidia customer now building competing silicon to capture more AI economics itself is a sign hyperscalers expect inference costs and capacity to remain in high demand long-term.",
+      "source_name": "Axios",
+      "url": "https://www.axios.com/2026/10/13/big-tech-ai-chips-nvidia-rivals",
+      "published_at": "2026-10-13T09:00:07Z",
+      "topic": "chips_compute",
+      "companies": ["Microsoft", "Nvidia"],
+      "tickers": ["MSFT", "NVDA"],
       "importance": 4,
       "market_relevance": "high",
-      "confidence": "medium",
-      "confidence_note": "Based on The Information's reporting citing people familiar with the relationship; neither Anthropic nor IREN has publicly confirmed the agreement or disclosed its value."
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "3f1047736c61",
+      "headline": "Tencent launches $5B bond sale explicitly to fund AI capex",
+      "summary": "Tencent began marketing dollar and offshore yuan bonds to raise about $5 billion, telling fixed-income investors the proceeds will mainly finance AI-related capital expenditure and chip purchases as its capex has surged.",
+      "why_it_matters": "A major non-US tech company turning to debt markets specifically for AI spending adds to evidence that AI capex increasingly outpaces free cash flow even among highly profitable firms.",
+      "source_name": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-13/tencent-kicks-off-5-billion-bond-sale-to-finance-ai-spending",
+      "published_at": "2026-10-13T00:25:58Z",
+      "topic": "funding_ma",
+      "companies": ["Tencent"],
+      "tickers": ["TCEHY"],
+      "importance": 3,
+      "market_relevance": "medium",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "4d374652e16b",
+      "headline": "Nvidia's China AI chip share collapses to 34% as Huawei gains",
+      "summary": "New IDC data cited by Reuters shows Nvidia's share of China's data-center AI chip market fell to 34% in H1 2026, down from 55% across all of 2025, with shipments down 44% year-over-year as Huawei's share nearly doubled to 28% amid export controls and domestic substitution.",
+      "why_it_matters": "A structural loss of Nvidia's China market position shows export-control policy and domestic-chip competition are durably eroding its addressable revenue, a chip-layer headwind that pure infrastructure demand numbers elsewhere can mask.",
+      "source_name": "Business Recorder",
+      "url": "https://www.brecorder.com/news/40443949/nvidias-china-ai-chip-share-falls-as-huawei-closes-gap-report-finds",
+      "published_at": "2026-10-13T00:00:00Z",
+      "topic": "chips_compute",
+      "companies": ["Nvidia"],
+      "tickers": ["NVDA"],
+      "importance": 4,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
     }
   ]
 }
