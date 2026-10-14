@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.2",
+  "run_id": "2026-10-14T13:00:00Z",
+  "status": "ok",
+  "status_note": "",
+  "window_start": "2026-10-13T13:10:00Z",
+  "window_end": "2026-10-14T13:00:00Z",
+  "briefing": "ASML's third straight 2026 guidance raise and its warning that AI-driven demand for chipmaking tools will outstrip supply through 2028 reinforced the infrastructure-layer bull case, while financing-stress signals pointed the other way: SoftBank is paying record-high junk-bond yields to keep funding its $64.6B OpenAI bet, and a Wharton-GBK survey found only 28% of enterprises see strongly positive AI ROI despite 80% reporting some return. Anthropic warned that small AI models could be months from self-replicating across IoT devices, adding to the security overhang on frontier labs. Chinese firms buying over a million Nvidia gaming chips to plug an AI compute shortfall underscores both continued chip demand and the limits of export controls. Overall the window adds more evidence of financing strain layered on top of still-strong infrastructure demand.",
+  "top_story_ids": [
+    "c179013edfb0",
+    "13eb8c6796fa",
+    "3f1852a05c8d"
+  ],
+  "roi_analysis": {
+    "stance": "mixed",
+    "verdict": "Chip-equipment demand and enterprise ROI data both show genuine value creation at the margins, but the financing side of the trade is showing more visible strain this run, with record-high borrowing costs and a prominent forecast that tech debt issuance will exceed the US government's by 2027.",
+    "supporting_points": [
+      "ASML raised its 2026 sales guidance for the third consecutive time and said AI-driven demand for its lithography tools will exceed its planned supply in both 2027 and 2028, with customers already discussing orders for 2029 and 2030 (Bloomberg).",
+      "A Wharton-GBK survey of 1,416 US enterprise leaders and employees found 80% report positive AI ROI, and departments that measure AI against growth outcomes are nearly three times as likely to report strongly positive returns as those tracking efficiency alone, 35% versus 13% (Business Wire).",
+      "Broadcom CEO Hock Tan credited OpenAI and Anthropic with already generating real revenue from deployed models even as he voiced broader skepticism about AI investors (prior run; Reuters).",
+      "Oracle, Tencent and other large players continue to sign and expand multi-billion-dollar compute leases, a sign that incremental AI capacity keeps finding paying customers even as individual deals get scrutinized (prior run context)."
+    ],
+    "counter_points": [
+      "SoftBank is paying its highest-ever bond yields, up to 9.75%, in a record $11 billion junk-bond offering to keep funding its $64.6 billion OpenAI commitment, with its credit-default-swap spreads up 24% as investors question concentration risk (Reuters/Japan Times).",
+      "Only 28% of enterprise leaders in the Wharton-GBK survey describe their AI returns as strongly positive even though 80% report some positive return, and just 7% of organizations meet all three of the study's markers for value, workflow transformation and alignment (Business Wire).",
+      "Chinese tech firms bought more than 1 million Nvidia gaming and workstation chips this year to work around export controls and cover a domestic AI chip shortfall, showing continued circumvention pressure and policy friction in a major market (Tom's Hardware/Financial Times).",
+      "Anthropic's own safety team warned small AI models could be months from self-replicating across internet-connected devices, adding a new security and regulatory overhang on the industry (The Register)."
+    ],
+    "by_layer": {
+      "infrastructure": "ASML's guidance raise and supply-constraint warning show chip-equipment demand remains durably ahead of capacity, even as SoftBank's record borrowing costs show financing for that buildout is getting more expensive.",
+      "labs": "Frontier labs keep showing commercial traction, but the lab layer remains dependent on debt-heavy backers like SoftBank to keep funding compute commitments, and Anthropic's own safety research is flagging new risks tied to model capability growth.",
+      "enterprise": "The Wharton-GBK study shows enterprise AI ROI is real but concentrated among firms that redesign workflows and measure growth outcomes, with most organizations still well short of strongly positive returns."
+    },
+    "what_changed": "This run adds a granular enterprise ROI survey and a record-yield SoftBank bond sale, both sharpening the financing and enterprise-returns debate without moving the stance off mixed."
+  },
+  "gpu_price_index": {
+    "as_of": "2026-10-13T00:00:00Z",
+    "source": "Mercatus GPU Price Index",
+    "gpus": [
+      {
+        "model": "H100",
+        "display_name": "H100",
+        "latest": 3.9859,
+        "change_7d_pct": 2.1
+      },
+      {
+        "model": "H200",
+        "display_name": "H200",
+        "latest": 5.0215,
+        "change_7d_pct": 3.4
+      },
+      {
+        "model": "B200",
+        "display_name": "B200",
+        "latest": 6.8131,
+        "change_7d_pct": 1.4
+      },
+      {
+        "model": "B300",
+        "display_name": "B300",
+        "latest": 8.9489,
+        "change_7d_pct": 2.7
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "c179013edfb0",
+      "headline": "ASML raises 2026 outlook, warns AI demand will outstrip tool supply to 2028",
+      "summary": "ASML raised its full-year 2026 sales guidance for the third consecutive time after record Q3 results, while CEO Christophe Fouquet said planned chipmaking-tool supply for 2027 and 2028 will not fully meet AI-driven customer demand.",
+      "why_it_matters": "The sole maker of EUV lithography machines signaling a multi-year supply gap is concrete evidence that AI infrastructure demand remains ahead of what the semiconductor supply chain can deliver.",
+      "source_name": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-14/asml-raises-full-year-sales-outlook-as-ai-boom-drives-demand",
+      "published_at": "2026-10-14T00:00:00Z",
+      "topic": "chips_compute",
+      "companies": [],
+      "tickers": [],
+      "importance": 4,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "13eb8c6796fa",
+      "headline": "SoftBank pays record yields in $11B bond sale to fund OpenAI bet",
+      "summary": "SoftBank's record $11 billion junk-bond offering, priced at a record coupon of 9.75%, highlights the pressure on CEO Masayoshi Son to generate returns on $64.6 billion committed to OpenAI as its credit-default-swap spreads have jumped.",
+      "why_it_matters": "Rising borrowing costs for one of AI's largest backers is direct evidence of financing stress building beneath the infrastructure buildout.",
+      "source_name": "The Japan Times",
+      "url": "https://www.japantimes.co.jp/business/2026/10/14/companies/softbank-junk-bond-sale/",
+      "published_at": "2026-10-14T02:14:00Z",
+      "topic": "funding_ma",
+      "companies": [
+        "SoftBank",
+        "OpenAI"
+      ],
+      "tickers": [],
+      "importance": 4,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "3f1852a05c8d",
+      "headline": "Wharton-GBK study: only 28% of firms see strongly positive AI ROI",
+      "summary": "A fourth annual Wharton Human-AI Research/GBK Collective survey of 1,416 US enterprise leaders and employees found 80% report positive AI ROI but only 28% call it strongly positive, with growth-focused measurement nearly tripling the odds of strong returns.",
+      "why_it_matters": "This is the most direct, recent enterprise-level evidence on whether AI spending is translating into measurable financial returns, the core of the standing question.",
+      "source_name": "Business Wire",
+      "url": "https://www.businesswire.com/news/home/20261013596222/en/Strong-ROI-for-AI-Nearly-3X-More-Common-When-Companies-Measure-Growth-Versus-Efficiency-Alone-Wharton-GBK-Study-Finds",
+      "published_at": "2026-10-13T15:56:00Z",
+      "topic": "research",
+      "companies": [],
+      "tickers": [],
+      "importance": 4,
+      "market_relevance": "medium",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "531de9905e34",
+      "headline": "Anthropic warns small AI models may soon self-replicate on IoT devices",
+      "summary": "Anthropic's Frontier Red Team reported that small open-weight models could be months from being able to self-replicate across internet-connected devices like smart TVs, after demonstrating partial replication using cheap Android TV boxes.",
+      "why_it_matters": "A frontier lab's own safety team flagging a near-term new attack surface adds to the regulatory and security overhang on the industry even as commercial momentum continues.",
+      "source_name": "The Register",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/13/anthropic-conjures-another-threat-that-doesnt-exist-yet-to-stoke-fears-of-ai-apocalypse/5302866",
+      "published_at": "2026-10-13T17:49:00Z",
+      "topic": "security",
+      "companies": [
+        "Anthropic"
+      ],
+      "tickers": [],
+      "importance": 3,
+      "market_relevance": "low",
+      "confidence": "medium",
+      "confidence_note": "Based on a simplified lab demonstration with deliberately exposed interfaces, not an observed real-world attack."
+    },
+    {
+      "id": "28eb3d9421d8",
+      "headline": "Chinese firms bought 1M+ Nvidia gaming chips to cover AI compute gap",
+      "summary": "Financial Times reporting found Chinese tech companies have bought more than 1 million Nvidia gaming and workstation chips this year, mostly RTX Pro 6000D, RTX Pro 5000 and RTX 5090 cards, to work around export controls and a domestic AI chip shortfall estimated at 1.5 million units.",
+      "why_it_matters": "Continued large-scale chip demand in China despite export controls shows both the depth of AI compute demand and the limits of US policy in constraining it.",
+      "source_name": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/pc-components/gpus/chinese-ai-companies-buy-1-million-nvidia-gpus-in-a-single-year-report-claims-export-control-compliant-chips-flood-the-market-to-bridge-gap-in-compute-demand",
+      "published_at": null,
+      "topic": "policy",
+      "companies": [
+        "Nvidia"
+      ],
+      "tickers": [
+        "NVDA"
+      ],
+      "importance": 3,
+      "market_relevance": "medium",
+      "confidence": "medium",
+      "confidence_note": "Volume figures are attributed to anonymous industry insiders cited by the Financial Times, not confirmed by Nvidia or the buyers."
+    }
+  ]
+}
