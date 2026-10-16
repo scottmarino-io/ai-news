@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.2",
+  "run_id": "2026-10-16T13:10:00Z",
+  "status": "ok",
+  "status_note": "",
+  "window_start": "2026-10-15T13:10:00Z",
+  "window_end": "2026-10-16T13:10:00Z",
+  "briefing": "CoreWeave's credit stress deepened further overnight, with its bonds slipping below 80 cents on the dollar and its five-year credit-default swaps briefly topping 1,140 basis points, even as Nvidia's Jensen Huang publicly insisted the company's cost of capital is falling and needs no backstop. The FTC added a new regulatory threat, issuing 50-page civil subpoenas to OpenAI and Anthropic over AI safety incidents, layering federal scrutiny on top of this week's state lawsuits. Against that backdrop, Schneider Electric delivered a concrete infrastructure-layer counterpoint, raising its 2026 guidance for the second time this year on triple-digit data-center order growth, showing picks-and-shovels suppliers still capturing real demand even as neocloud financing wobbles. Collectively, the window sharpens the divide between infrastructure financing stress and still-strong underlying demand for AI compute equipment.",
+  "top_story_ids": [
+    "950e9d4995b8",
+    "706ad4e62b76",
+    "bdf124f3cb0c"
+  ],
+  "roi_analysis": {
+    "stance": "mixed",
+    "verdict": "Underlying demand for AI compute and the equipment that powers it remains strong, but the financing layer beneath neoclouds like CoreWeave is now flashing distress signals serious enough that even Nvidia's CEO felt compelled to publicly intervene.",
+    "supporting_points": [
+      "Schneider Electric raised its 2026 profit and revenue guidance for the second time this year, citing triple-digit data-center order growth and a record backlog, with CEO Olivier Blum saying 'Data Centers remained a key growth driver' (Reuters).",
+      "Nvidia CEO Jensen Huang said CoreWeave's 'strength is improving every day' and that its cost of capital is 'actually decreasing,' pointing to Nvidia's commitment to purchase any unsold CoreWeave capacity through April 2032 as a backstop against demand risk (Bloomberg).",
+      "TSMC reported a sixth consecutive quarter of record profit, with Q3 net profit up 68.7% year-over-year and guidance for roughly 58% fourth-quarter revenue growth, driven by AI accelerator demand (Reuters, via TrendForce)."
+    ],
+    "counter_points": [
+      "CoreWeave's bonds fell below 80 cents on the dollar and its yield approached 15%, while its five-year credit-default swap spread briefly exceeded 1,140 basis points, a level generally considered a sign of credit distress; twenty major AI and semiconductor stocks have lost more than $1 trillion in value this week (CNBC, TokenPost).",
+      "The FTC sent 50-plus-page civil investigative demands to OpenAI and Anthropic seeking records on safety incidents, safeguards, marketing materials and privacy policies, adding federal regulatory risk on top of this week's state lawsuits against OpenAI (Axios).",
+      "The Federal Reserve's October Beige Book found that firms in five of twelve districts had reduced staffing through attrition, delayed hiring, or expected to create fewer jobs after investing in AI, an early signal that AI-driven cost savings could be weighing on labor demand before showing up as revenue gains elsewhere (Federal Reserve).",
+      "A credit analyst publicly disputed Huang's reassurance, noting CoreWeave's bond spreads have widened and its equity has fallen, arguing the data show its cost of capital is rising, not falling (TradersUnion)."
+    ],
+    "by_layer": {
+      "infrastructure": "Financing stress at neoclouds intensified further this run, with CoreWeave's CDS and bond yields hitting fresh distress levels even as Nvidia's CEO defended the company's finances, while equipment suppliers like Schneider Electric and foundries like TSMC continue to report record demand and raised guidance.",
+      "labs": "No new lab-level financial disclosures this run; Anthropic's $16.8 billion Q3 revenue and OpenAI's lowered revenue run rate from the prior run remain the most recent data points.",
+      "enterprise": "The Fed's Beige Book is the first systematic evidence that AI-driven productivity gains are already affecting hiring decisions at some firms, a cost-side signal that sits alongside still-mixed survey data on realized enterprise AI ROI."
+    },
+    "what_changed": "Infrastructure financing stress deepened further (CoreWeave CDS above 1,140bps, bonds below 80 cents, $1 trillion in sector losses this week) even as new data points (Schneider Electric's second guidance raise, TSMC's record quarter, Huang's public defense of CoreWeave) reinforced that physical compute and equipment demand remains intact, widening rather than resolving last run's split between infrastructure financing and underlying demand."
+  },
+  "gpu_price_index": {
+    "as_of": "2026-10-14T00:00:00Z",
+    "source": "Mercatus GPU Price Index",
+    "gpus": [
+      {
+        "model": "H100",
+        "display_name": "H100",
+        "latest": 3.9893,
+        "change_7d_pct": 1.6
+      },
+      {
+        "model": "H200",
+        "display_name": "H200",
+        "latest": 5.0788,
+        "change_7d_pct": 3.5
+      },
+      {
+        "model": "B200",
+        "display_name": "B200",
+        "latest": 6.8052,
+        "change_7d_pct": 1.4
+      },
+      {
+        "model": "B300",
+        "display_name": "B300",
+        "latest": 9.066,
+        "change_7d_pct": 3.5
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "950e9d4995b8",
+      "headline": "CoreWeave bonds fall below 80 cents as AI data center debt sells off",
+      "summary": "CoreWeave's bonds dropped below 80 cents on the dollar with yields nearing 15%, its five-year CDS spread briefly exceeded 1,140 basis points, and Nvidia's market value fell about $270 billion over the week as twenty major AI and semiconductor stocks lost more than $1 trillion combined.",
+      "why_it_matters": "Distressed-debt-level pricing on a major neocloud's bonds is direct market evidence that lenders increasingly doubt AI infrastructure revenue can keep pace with debt-funded buildouts.",
+      "source_name": "TokenPost",
+      "url": "https://www.tokenpost.com/news/investing/33221",
+      "published_at": "2026-10-16T11:45:00Z",
+      "topic": "funding_ma",
+      "companies": [
+        "CoreWeave",
+        "Nvidia",
+        "Nebius"
+      ],
+      "tickers": [
+        "CRWV",
+        "NVDA",
+        "NBIS"
+      ],
+      "importance": 5,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "706ad4e62b76",
+      "headline": "FTC sends 50-page civil subpoenas to OpenAI and Anthropic over safety incidents",
+      "summary": "The FTC sent civil investigative demands to OpenAI and Anthropic seeking documents on safety incidents, safeguards, marketing materials and privacy policies as part of a consumer-protection probe, with the agency signaling it plans to subpoena more AI firms and compel executive testimony.",
+      "why_it_matters": "Federal regulatory scrutiny layered on top of this week's state lawsuits adds compliance and reputational risk for both labs just as they court public markets.",
+      "source_name": "Axios",
+      "url": "https://www.axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation",
+      "published_at": "2026-10-15T18:00:00Z",
+      "topic": "legal",
+      "companies": [
+        "OpenAI",
+        "Anthropic"
+      ],
+      "tickers": [],
+      "importance": 4,
+      "market_relevance": "medium",
+      "confidence": "medium",
+      "confidence_note": "Based on a source familiar with the matter cited by Axios; the FTC declined further comment beyond confirming the subpoenas to other outlets."
+    },
+    {
+      "id": "bdf124f3cb0c",
+      "headline": "Nvidia's Huang says CoreWeave improving, dismisses need for backstop",
+      "summary": "Speaking in Stockholm as CoreWeave's credit-default swaps hit a record high, Nvidia CEO Jensen Huang said CoreWeave's 'strength is improving every day' and its cost of capital is 'actually decreasing,' while a credit analyst publicly disputed the claim citing widening bond spreads.",
+      "why_it_matters": "A major supplier and investor publicly defending a distressed customer's finances highlights how intertwined AI infrastructure financing has become, and how contested the read on CoreWeave's health now is.",
+      "source_name": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-15/nvidia-ceo-huang-says-coreweave-improving-no-backstop-needed",
+      "published_at": "2026-10-15T14:30:00Z",
+      "topic": "funding_ma",
+      "companies": [
+        "Nvidia",
+        "CoreWeave"
+      ],
+      "tickers": [
+        "NVDA",
+        "CRWV"
+      ],
+      "importance": 4,
+      "market_relevance": "high",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "afbd6e4a0a73",
+      "headline": "Schneider Electric raises 2026 guidance again on data-center demand",
+      "summary": "Schneider Electric raised its 2026 organic revenue growth target to 12-14% and adjusted EBITA growth target to 18-21%, the second guidance increase this year, citing triple-digit data-center order growth and a record backlog.",
+      "why_it_matters": "A key power and cooling supplier raising guidance on real, booked demand is concrete evidence that AI infrastructure spending is translating into revenue for at least one layer of the supply chain, even as neocloud financing wobbles.",
+      "source_name": "Reuters",
+      "url": "https://www.investing.com/news/stock-market-news/schneider-electric-raises-2026-targets-again-on-booming-data-centre-demand-4953128",
+      "published_at": "2026-10-16T06:30:00Z",
+      "topic": "capex_deals",
+      "companies": [],
+      "tickers": [],
+      "importance": 3,
+      "market_relevance": "medium",
+      "confidence": "high",
+      "confidence_note": ""
+    },
+    {
+      "id": "38da9064bbc9",
+      "headline": "Oracle's credit-default swaps hit record as AI debt fears spread",
+      "summary": "Oracle's five-year credit-default swap spread widened to a record 288 basis points from 260 a week earlier, a smaller but notable move alongside CoreWeave's CDS blowing out above 1,000 basis points, as bond investors price in rising AI-financing risk.",
+      "why_it_matters": "Credit markets pricing in higher default risk for a hyperscaler, not just a leveraged neocloud, signals financing stress is spreading beyond the most exposed names in the AI buildout.",
+      "source_name": "GuruFocus",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/oracles-default-insurance-hits-record-122137367.html",
+      "published_at": "2026-10-15T16:00:00Z",
+      "topic": "capex_deals",
+      "companies": [
+        "Oracle",
+        "CoreWeave"
+      ],
+      "tickers": [
+        "ORCL",
+        "CRWV"
+      ],
+      "importance": 3,
+      "market_relevance": "high",
+      "confidence": "medium",
+      "confidence_note": "CDS spread figures sourced from GuruFocus/market-data reporting rather than a direct exchange filing."
+    }
+  ]
+}
